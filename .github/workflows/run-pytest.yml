@@ -29,7 +29,6 @@ jobs:
       # Шаг 3: Установка зависимостей 
       - name: Install dependencies
         run: |
-          cd Lab1
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install setuptools
@@ -38,5 +37,4 @@ jobs:
       # Шаг 4: Запуск ваших тестов
       - name: Run tests with pytest
         run: |
-          cd Lab1
           python -m pytest tests/test_user.py -v
